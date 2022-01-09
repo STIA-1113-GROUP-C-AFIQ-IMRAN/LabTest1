@@ -1,0 +1,77 @@
+Coding:
+package labTestQuestion;
+
+import java.util.Scanner;
+
+public class LabTest1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int item1, item2, item3, item, Q1, Q2, Q3;
+		
+		Scanner sc = new Scanner (System.in);
+        
+		System.out.print("Enter the number of items: "); 
+		item = sc.nextInt();
+		if (item < 4) {
+			
+		System.out.print("Enter price of first item: RM");
+        item1 = sc.nextInt();
+        
+        System.out.print("Enter quantity of first item: ");
+        Q1 = sc.nextInt();
+        
+        System.out.println();
+        
+        System.out.print("Enter price of second item: RM");
+        item2 = sc.nextInt();
+        
+        System.out.print("Enter quantity of first item: ");
+        Q2 = sc.nextInt();
+        
+        System.out.println();
+        
+        System.out.print("Enter price of third item: RM");
+        item3 = sc.nextInt();
+       
+        System.out.print("Enter quantity of third item: ");
+        Q3 = sc.nextInt();
+        
+        double totalprice1 = item1 * Q1;
+        double totalprice2 = item2 * Q2;
+        double totalprice3 = item3 * Q3;
+        double totalprice = totalprice1 + totalprice2 + totalprice3;
+        double discount;
+        if (totalprice > 100 ) {
+            discount = 0.2 * totalprice;}
+            else {
+            discount = 0.1 * totalprice;}
+        
+        double paidprice;
+        paidprice = totalprice - discount;
+        
+        System.out.print("Total price         : RM" + totalprice);
+        System.out.println("\nDiscount received   : RM" + discount);
+        System.out.println("Price to be paid    : RM" + paidprice);
+        
+		}
+		
+		else {
+			System.out.println("Not valid");
+		}
+	}
+}
+
+Output:
+Enter the number of items: 3
+Enter price of first item: RM150
+Enter quantity of first item: 2
+
+Enter price of second item: RM50
+Enter quantity of first item: 3
+
+Enter price of third item: RM30
+Enter quantity of third item: 1
+Total price         : RM480.0
+Discount received   : RM96.0
+Price to be paid    : RM384.0
