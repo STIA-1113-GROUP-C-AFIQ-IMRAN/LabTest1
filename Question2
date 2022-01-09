@@ -1,0 +1,50 @@
+Coding:
+package labTestQuestion;
+
+import java.util.Scanner;
+
+public class labTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double sales, hours;
+		
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.print("Enter sales       :RM");
+		sales = sc.nextInt();
+		
+		System.out.print("Enter hours worked:");
+		hours = sc.nextInt();
+		
+		if ((sales >= 150) && (sales<= 300)) {
+			double commision = 0.05 * sales;
+			double wages = hours * 5;
+			double dailywages = commision + wages;
+			System.out.print("Commision" + commision);
+			System.out.print("Daily wages" + dailywages);
+			
+		}
+		else if ((sales >= 301 ) && ( sales <= 500)) {
+			double commision = (0.1 * sales);
+			double wages = hours * 5;
+			double dailywages = commision + wages;
+			System.out.println("Commision         :" + commision);
+			System.out.println("Daily wages       :" + dailywages);
+		}
+			else {
+				double commision = 0.15 * sales;
+				double wages = hours * 5;
+				double dailywages = commision + wages;
+				System.out.println("Commision" + commision);
+				System.out.println("Daily wages" + dailywages);
+			}
+		}
+
+	}
+  
+  Output:
+Enter sales       :RM500
+Enter hours worked:5
+Commision         :50.0
+Daily wages       :75.0
